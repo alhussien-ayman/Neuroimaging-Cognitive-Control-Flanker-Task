@@ -1,0 +1,57 @@
+
+/bin/cp /tmp/feat_gbm2u_ln.fsf design.fsf
+
+/home/alhussien-ayman/fsl/bin/feat_model design
+
+mkdir .files;cp /home/alhussien-ayman/fsl/doc/fsl.css .files;cp -r /home/alhussien-ayman/fsl/doc/images .files/images
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat2_pre   /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat -gfeatprep
+2419
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 2419  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope1.feat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope1.feat -I 1 -flame1
+35661
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 35661 -t ./.flame
+36483
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 36483  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope1.feat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope1.feat -flame3
+36785
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 36785  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope1.feat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope1.feat -poststats 1
+41959
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 41959  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope1.feat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope1.feat -stop
+47609
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 2419  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope2.feat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope2.feat -I 2 -flame1
+47894
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 47894 -t ./.flame
+48716
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 48716  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope2.feat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope2.feat -flame3
+49016
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 49016  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope2.feat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope2.feat -poststats 1
+54185
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 54185  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope2.feat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope2.feat -stop
+59835
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 2419  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope3.feat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope3.feat -I 3 -flame1
+60120
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 60120 -t ./.flame
+60942
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 60942  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope3.feat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope3.feat -flame3
+61245
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 61245  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope3.feat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope3.feat -poststats 1
+66415
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 66415  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope3.feat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope3.feat -stop
+72064
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 47609,59835,72064  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flancker_2ndLevel.gfeat/cope3.feat/design.fsf -D /home/alhussien-ayman/Flancker_2ndLevel.gfeat -stop
+72208
