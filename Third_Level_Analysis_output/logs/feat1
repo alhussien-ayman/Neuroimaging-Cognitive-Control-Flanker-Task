@@ -1,0 +1,27 @@
+
+/bin/cp /tmp/feat_swey54x_.fsf design.fsf
+
+/home/alhussien-ayman/fsl/bin/feat_model design
+
+mkdir .files;cp /home/alhussien-ayman/fsl/doc/fsl.css .files;cp -r /home/alhussien-ayman/fsl/doc/images .files/images
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat2_pre   /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flanker_Level3_inc-con.gfeat/design.fsf -D /home/alhussien-ayman/Flanker_Level3_inc-con.gfeat -gfeatprep
+2314
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 2314  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flanker_Level3_inc-con.gfeat/cope1.feat/design.fsf -D /home/alhussien-ayman/Flanker_Level3_inc-con.gfeat/cope1.feat -I 1 -flame1
+3489
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 3489 -t ./.flame
+3744
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 3744  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flanker_Level3_inc-con.gfeat/cope1.feat/design.fsf -D /home/alhussien-ayman/Flanker_Level3_inc-con.gfeat/cope1.feat -flame3
+3784
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 3784  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flanker_Level3_inc-con.gfeat/cope1.feat/design.fsf -D /home/alhussien-ayman/Flanker_Level3_inc-con.gfeat/cope1.feat -poststats 1
+3841
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 3841  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flanker_Level3_inc-con.gfeat/cope1.feat/design.fsf -D /home/alhussien-ayman/Flanker_Level3_inc-con.gfeat/cope1.feat -stop
+4504
+
+/home/alhussien-ayman/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 4504  /home/alhussien-ayman/fsl/bin/feat /home/alhussien-ayman/Flanker_Level3_inc-con.gfeat/cope1.feat/design.fsf -D /home/alhussien-ayman/Flanker_Level3_inc-con.gfeat -stop
+4643

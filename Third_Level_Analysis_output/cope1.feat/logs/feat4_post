@@ -1,0 +1,22 @@
+</pre><hr>Post-stats<br><pre>
+
+/home/alhussien-ayman/fsl/bin/fslmaths stats/zstat1 -mas mask thresh_zstat1
+
+echo 243703 > thresh_zstat1.vol
+zstat1: DLH=0.0792747 VOLUME=243703 RESELS=59.1985
+
+/home/alhussien-ayman/fsl/bin/fsl-cluster -i thresh_zstat1 -t 3.1 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26 --mm --olmax=lmax_zstat1_std.txt --scalarname=Z -p 0.05 -d 0.0792747 --volume=243703 -c stats/cope1 > cluster_zstat1_std.txt
+
+/home/alhussien-ayman/fsl/bin/cluster2html . cluster_zstat1 -std
+
+/home/alhussien-ayman/fsl/bin/fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null
+3.100642 4.423265 
+Rendering using zmin=3.100642 zmax=4.423265
+
+/home/alhussien-ayman/fsl/bin/overlay 1 0 example_func -a thresh_zstat1 3.100642 4.423265 rendered_thresh_zstat1
+
+/home/alhussien-ayman/fsl/bin/slicer rendered_thresh_zstat1 -S 2 750 rendered_thresh_zstat1.png
+
+/bin/cp /home/alhussien-ayman/fsl/etc/luts/ramp.gif .ramp.gif
+
+mkdir -p tsplot ; /home/alhussien-ayman/fsl/bin/tsplot . -f filtered_func_data -o tsplot
