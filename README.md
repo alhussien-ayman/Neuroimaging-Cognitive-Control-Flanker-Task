@@ -12,9 +12,9 @@
 
 <br/>
 
-<img src="assets/incong-cong.png" alt="Incongruent vs Congruent Brain Activation" width="85%"/>
+<img src="assets\paper_and_report.png" alt="My Paper and Report" width="85%"/>
 
-*Group-level brain activation maps: Incongruent (left) vs. Congruent (right) contrast*
+*My Paper and Report*
 
 </div>
 
@@ -95,6 +95,10 @@ Raw fMRI Data (BIDS Format)
 <br/>
 
 ### Cluster Activation Comparison
+<div align="center">
+<img src="assets/incong-cong.png" alt="Cluster Activation Comparison across Brain Regions" width="80%"/>
+
+</div>
 
 <div align="center">
 <img src="assets/comparison.png" alt="Cluster Activation Comparison across Brain Regions" width="80%"/>
