@@ -81,7 +81,7 @@ Raw fMRI Data (BIDS Format)
 ```
 
 
-## 📊 Key Results
+## Key Results
 
 ### Whole-Brain Group Activation
 
